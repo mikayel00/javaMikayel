@@ -3,9 +3,9 @@ package homework2;
 public class java3 {
     public static void main(String[] args) {
         /* ---- 3 ---- */
-        int num1 = 5;
+        int num1 = 6;
         int num2 = 4;
-        int num3 = 6;
+        int num3 = 4;
 
         if (num1 < num2 && num1 < num3) {
             System.out.println("Smallest: " + num1);
@@ -13,11 +13,12 @@ public class java3 {
         else if (num2 < num1 && num2 < num3) {
             System.out.println("Smallest: " + num2);
         }
-        else if (num1 == num2 || num1 == num3 || num2 == num2) {
-            System.out.println("Enter not equal values!");
-        }
-        else {
+        else if (num3 < num1 && num3 < num2){
             System.out.println("Smallest: " + num3);
         }
+        else {
+            System.out.println("Enter not equal values!");
+        }
+
     }
 }
