@@ -2,17 +2,26 @@ package homework3;
 
 public class java2_d {
     public static void main(String[] args) {
-        int[] mass = new int[201];
-        int sum = 0;
-        int num = 0;
-        for (int i = 0, j = -100; i < mass.length; i++, j++) {
-            if (j > 0 && j % 3 != 0) {
-                num++;
-                mass[i] = j;
-                sum += mass[i];
-
+        int index = 0;
+        for (int i = -100; i <= 100; i++) {
+            if (i % 3 != 0) {
+                index++;
             }
         }
-        System.out.println(sum / num);
+        int[] array = new int[index];
+        for (int i = 0, j = -100; j <= 100; j++) {
+            if (j % 3 != 0) {
+                array[i] = j;
+                i++;
+            }
+        }
+        int sumIndex = 0,sum = 0;
+        for (int i = 0;i < index; i++) {
+            if (array[i] > 0) {
+                sumIndex++;
+                sum += array[i];
+            }
+        }
+        System.out.println(sum/sumIndex);
     }
 }
