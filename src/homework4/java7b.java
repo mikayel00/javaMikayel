@@ -9,23 +9,21 @@ public class java7b {
                             {13, 9, 11, 17, 1}};
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + " ");
+                System.out.print(matrix[j][i] + " ");
             }
             System.out.println();
         }
         int[] minArray = new int[5];
         for (int i = 0; i < matrix.length; i++) {
-            int min = matrix[i][0];
+            int min = matrix[0][i];
             int[] temp = matrix[i];
             for (int k = 0; k < temp.length; k++) {
                 if (min > temp[k]) {
                     min = temp[k];
                 }
             }
-            System.out.println("Minimum value of " + i + " lines: " + min);
+            System.out.println("Minimum value of " + i + " column: " + min);
             minArray[i] = min;
-            for (int j = 0; j < matrix[i].length; j++) {
-            }
         }
         System.out.println();
         int max = minArray[0];

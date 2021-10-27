@@ -12,7 +12,7 @@ public class java7a {
             for (int j = 0;j < matrix[i].length;j++){
                 System.out.print(matrix[i][j] + " ");
                 int temp = matrix[i][j];
-                if (temp >= 10){
+                if (temp >= 10 && temp < 100){
                     count++;
                 }
             }
